@@ -13,13 +13,16 @@
                 v-model="columns"
                 class="list-group column-container"
         >
-            <column
+            <div
                     v-for="column in columns"
                     :key="column.id"
                     class="column list-group-item"
-                    :column-data="column"
-                    @deleteColumn="deleteColumn(column)"
-            />
+            >
+                <column
+                        :column-data="column"
+                        @deleteColumn="deleteColumn(column)"
+                />
+            </div>
         </draggable>
         <add-column-dialog
                 :value="showAddColumnDialog"

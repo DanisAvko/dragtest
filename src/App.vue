@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-container style="overflow: auto; height: 100vh" fluid>
+        <v-container class="app-container" fluid>
             <column-list
                     :items="columns"
                     @addColumn="addColumn"
@@ -25,7 +25,7 @@
                 this.columns = payload
             },
             addColumn(payload) {
-              this.columns.unshift(payload)
+                this.columns.unshift(payload)
             },
             deleteColumn(column) {
                 let delIndex = this.columns.findIndex(item => item.id === column.id)
@@ -40,3 +40,10 @@
         }
     };
 </script>
+
+<style scoped>
+    .app-container {
+        overflow: auto;
+        height: 100vh
+    }
+</style>

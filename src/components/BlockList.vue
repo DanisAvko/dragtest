@@ -1,17 +1,20 @@
 <template>
     <v-container class="pa-0" fluid>
         <draggable
-                class="list-group"
+                class="list-group pb-13"
                 v-bind="dragOptions"
                 v-model="blocks"
         >
-            <block
+            <div
                     v-for="block in blocks"
                     :key="block.id"
-                    :blockData="block"
-                    @deleteBlock="deleteBlock(block)"
                     class="column-block mt-5 mb-5 list-group-item"
-            />
+            >
+                <block
+                        :blockData="block"
+                        @deleteBlock="deleteBlock(block)"
+                />
+            </div>
         </draggable>
     </v-container>
 </template>
