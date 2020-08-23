@@ -1,7 +1,7 @@
 <template>
     <v-container class="pa-0" fluid>
         <draggable
-                class="list-group pb-13"
+                class="list-group"
                 v-bind="dragOptions"
                 v-model="blocks"
         >
