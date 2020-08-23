@@ -1,0 +1,61 @@
+<template>
+    <v-container class="pa-0" fluid>
+        <draggable
+                class="list-group"
+                v-bind="dragOptions"
+                v-model="blocks"
+        >
+            <block
+                    v-for="block in blocks"
+                    :key="block.id"
+                    :blockData="block"
+                    @deleteBlock="deleteBlock(block)"
+                    class="column-block mt-5 mb-5 list-group-item"
+            />
+        </draggable>
+    </v-container>
+</template>
+
+<script>
+    export default {
+        name: "BlockList",
+        props: {
+            items: {
+                type: Array,
+                required: true
+            }
+        },
+        components: {
+            Block: () => import('./Block'),
+            Draggable: () => import('vuedraggable')
+        },
+        computed: {
+            blocks: {
+                get() {
+                    return this.items
+                },
+                set(value) {
+                    this.$emit('setBlocks', value)
+                },
+            },
+            dragOptions() {
+                return {
+                    animation: 200,
+                    group: "blocks",
+                };
+            }
+        },
+        methods: {
+            deleteBlock(block) {
+                this.$emit('deleteBlock', block)
+            }
+        }
+    }
+</script>
+
+<style scoped>
+    .column-block {
+        flex-flow: column nowrap;
+        cursor: pointer;
+    }
+</style>

@@ -1,0 +1,138 @@
+{
+  "columns": [
+    {
+      "id": 1,
+      "title": "Column 1",
+      "blocks": [
+        {
+          "id": 11,
+          "title": "Block 1"
+        },
+        {
+          "id": 12,
+          "title": "Block 2"
+        },
+        {
+          "id": 13,
+          "title": "Block 3"
+        },
+        {
+          "id": 14,
+          "title": "Block 4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Column 2",
+      "blocks": [
+        {
+          "id": 21,
+          "title": "Block 1"
+        },
+        {
+          "id": 22,
+          "title": "Block 2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Column 3",
+      "blocks": [
+        {
+          "id": 31,
+          "title": "Block 1"
+        },
+        {
+          "id": 32,
+          "title": "Block 2"
+        },
+        {
+          "id": 33,
+          "title": "Block 3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Column 4",
+      "blocks": [
+        {
+          "id": 41,
+          "title": "Block 1"
+        },
+        {
+          "id": 42,
+          "title": "Block 2"
+        },
+        {
+          "id": 43,
+          "title": "Block 3"
+        },
+        {
+          "id": 44,
+          "title": "Block 4"
+        },
+        {
+          "id": 45,
+          "title": "Block 5"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Column 5",
+      "blocks": [
+        {
+          "id": 51,
+          "title": "Block 1"
+        },
+        {
+          "id": 52,
+          "title": "Block 2"
+        },
+        {
+          "id": 53,
+          "title": "Block 3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Column 6",
+      "blocks": [
+        {
+          "id": 61,
+          "title": "Block 1"
+        },
+        {
+          "id": 62,
+          "title": "Block 2"
+        },
+        {
+          "id": 63,
+          "title": "Block 3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Column 7",
+      "blocks": [
+        {
+          "id": 71,
+          "title": "Block 1"
+        },
+        {
+          "id": 72,
+          "title": "Block 2"
+        },
+        {
+          "id": 73,
+          "title": "Block 3"
+        }
+      ]
+    }
+  ]
+}

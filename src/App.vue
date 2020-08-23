@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <v-app>
+        <v-container style="overflow: auto; height: 100vh" fluid>
+            <column-list
+                    :items="columns"
+                    @addColumn="addColumn"
+                    @deleteColumn="deleteColumn"
+                    @setColumns="setColumns"
+            />
+        </v-container>
+    </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'App',
+        components: {
+            ColumnList: () => import('./components/ColumnList')
+        },
+        data: () => ({
+            columns: [],
+        }),
+        methods: {
+            setColumns(payload) {
+                this.columns = payload
+            },
+            addColumn(payload) {
+              this.columns.unshift(payload)
+            },
+            deleteColumn(column) {
+                let delIndex = this.columns.findIndex(item => item.id === column.id)
+                this.columns.splice(delIndex, 1)
+            },
+        },
+        mounted() {
+            import('./mocks/columns.json')
+                .then(response => {
+                    this.columns = response.columns
+                })
+        }
+    };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
